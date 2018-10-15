@@ -21,7 +21,7 @@ import tabian.com.instagramclone2.materialcamera.ICallback;
 import static tabian.com.instagramclone2.materialcamera.util.Degrees.DEGREES_270;
 import static tabian.com.instagramclone2.materialcamera.util.Degrees.DEGREES_90;
 
-/** Created by tomiurankar on 06/03/16. */
+/** Created by Saumya Pandey*/
 public class ImageUtil {
   private static final String TAG = "ImageUtil";
   /**

@@ -25,7 +25,7 @@ import tabian.com.instagramclone2.Home.HomeActivity;
 import tabian.com.instagramclone2.R;
 
 /**
- * Created by User on 6/19/2017.
+ * Created by Saumya Pandey
  */
 
 public class LoginActivity extends AppCompatActivity {

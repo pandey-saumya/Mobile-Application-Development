@@ -43,8 +43,7 @@ import tabian.com.instagramclone2.models.Story;
 import tabian.com.instagramclone2.models.UserAccountSettings;
 
 /**
- * Created by User on 5/28/2017.
- */
+ * Created by Saumya Pandey */
 
 public class HomeFragment extends Fragment implements OnUpdateListener, OnLoadListener {
 

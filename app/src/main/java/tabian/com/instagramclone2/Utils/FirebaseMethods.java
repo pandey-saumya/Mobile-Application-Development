@@ -53,7 +53,7 @@ import tabian.com.instagramclone2.models.UserAccountSettings;
 import tabian.com.instagramclone2.models.UserSettings;
 
 /**
- * Created by User on 6/26/2017.
+ * Created by Saumya Pandey
  */
 
 public class FirebaseMethods {

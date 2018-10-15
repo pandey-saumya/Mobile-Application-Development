@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Created by User on 7/29/2017.
+ * Created by Saumya Pandey
  */
 
 public class ImageManager {

@@ -17,7 +17,7 @@ import tabian.com.instagramclone2.R;
 import tabian.com.instagramclone2.Utils.Permissions;
 
 /**
- * Created by User on 5/28/2017.
+ * Created by Saumya Pandey
  */
 
 public class PhotoFragment extends Fragment {

@@ -46,7 +46,7 @@ import tabian.com.instagramclone2.models.User;
 import tabian.com.instagramclone2.models.UserAccountSettings;
 
 /**
- * Created by User on 9/22/2017.
+ * Created by Saumya Pandey
  */
 
 public class MainFeedListAdapter extends ArrayAdapter<Photo> {

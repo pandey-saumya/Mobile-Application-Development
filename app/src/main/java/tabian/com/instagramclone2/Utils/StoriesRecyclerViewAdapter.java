@@ -28,7 +28,7 @@ import tabian.com.instagramclone2.opengl.OpenGLES10Activity;
 
 
 /**
- * Created by User on 12/27/2017.
+ * Created by Saumya Pandey
  */
 
 public class StoriesRecyclerViewAdapter extends RecyclerView.Adapter<StoriesRecyclerViewAdapter.ViewHolder> {

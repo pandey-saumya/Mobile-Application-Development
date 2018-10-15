@@ -1,7 +1,7 @@
 package tabian.com.instagramclone2.models;
 
 /**
- * Created by User on 8/21/2017.
+ * Created by Saumya Pandey
  */
 
 public class Like {

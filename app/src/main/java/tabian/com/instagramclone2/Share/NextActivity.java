@@ -28,7 +28,7 @@ import tabian.com.instagramclone2.Utils.UniversalImageLoader;
 import tabian.com.instagramclone2.models.User;
 
 /**
- * Created by User on 7/24/2017.
+ * Created by Saumya Pandey
  */
 
 public class NextActivity extends AppCompatActivity {

@@ -18,7 +18,7 @@ import tabian.com.instagramclone2.Search.SearchActivity;
 import tabian.com.instagramclone2.Share.ShareActivity;
 
 /**
- * Created by User on 5/28/2017.
+ * Created by Saumya Pandey
  */
 
 public class BottomNavigationViewHelper {

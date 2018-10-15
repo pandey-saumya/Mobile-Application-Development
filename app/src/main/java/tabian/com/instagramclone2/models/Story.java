@@ -1,7 +1,7 @@
 package tabian.com.instagramclone2.models;
 
 /**
- * Created by User on 1/7/2018.
+ * Created by Saumya Pandey
  */
 
 public class Story {

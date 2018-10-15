@@ -1,7 +1,7 @@
 package tabian.com.instagramclone2.Utils;
 
 /**
- * Created by User on 6/26/2017.
+ * Created by Saumya Pandey
  */
 
 public class StringManipulation {
