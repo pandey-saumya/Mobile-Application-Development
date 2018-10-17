@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "1076306732613-ju8tjfvpsi5vsanshdqg9p3914didsfb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "saumya.com.instagramclone2",
+            "certificate_hash": "22c2589e9e7698e1ba7448e234761dca88b61ca7"
+          }
+        },
+        {
           "client_id": "1076306732613-prsu247r64j0jp7t4g5l8e54tgqij30n.apps.googleusercontent.com",
           "client_type": 3
         }
