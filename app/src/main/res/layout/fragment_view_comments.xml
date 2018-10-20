@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/relLayout1">
-
-        <include layout="@layout/snippet_comments_toolbar"/>
-
+        <include layout="@layout/comment_toolbar"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/relLayout2"
+        android:id="@id/relLayout2"
         android:layout_below="@+id/relLayout1"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="50dp">
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/listView"></ListView>
-
+            android:id="@+id/listview"></ListView>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:id="@+id/relLayout3"
         android:layout_alignParentBottom="true"
         android:background="@drawable/white_grey_border_top">
-
 
         <EditText
             android:layout_width="match_parent"
@@ -45,8 +42,8 @@
             android:layout_centerVertical="true"
             android:hint="Add a comment..."
             android:textSize="14sp"
-            android:id="@+id/comment"/>
-
+            android:id="@+id/comment"
+            />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -54,23 +51,5 @@
             android:src="@drawable/ic_checkmark"
             android:id="@+id/ivPostComment"
             android:layout_alignParentRight="true"/>
-
     </RelativeLayout>
-
-
 </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

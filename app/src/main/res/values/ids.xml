@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="stories_heading" type="id" />
-    <item name="recycler_view" type="id" />
+    <item name="result" type="id">result</item>
 </resources>

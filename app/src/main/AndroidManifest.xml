@@ -1,60 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="saumya.com.instagramclone2">
+    package="com.example.saumya.sharegram">
+   <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA" android:screenOrientation="portrait"/>
-    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-feature android:name="android.hardware.camera.flash" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.FLASHLIGHT"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:contentDescription="@null"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_sharegram_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Home.HomeActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleInstance">
+        <activity android:name=".Home.MainPage" >
+
 
         </activity>
-        <activity android:name=".Likes.LikesActivity"
-                  android:launchMode="singleInstance"/>
-        <activity android:name=".Profile.ProfileActivity"
-                  android:launchMode="singleInstance"/>
-        <activity android:name=".Share.ShareActivity"
-                  android:launchMode="singleInstance"/>
-        <activity android:name=".Share.NextActivity"
-                  android:launchMode="singleInstance"/>
-        <activity android:name=".Login.LoginActivity"
-                  android:launchMode="singleInstance">
+        <activity android:name=".Profile.AccountSettings"/>
+        <activity android:name=".UserFeed.Userfeed"/>
+        <activity android:name=".SignUp" />
+        <activity android:name=".Search.Search"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name=".share.ShareActivity"></activity>
+        <activity android:name=".share.NextActivity" />
+        <activity android:name=".share.WifiDirectActivity">
+
+        </activity>
+        <activity android:name=".LogIn">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".Profile.AccountSettingsActivity"
-                  android:launchMode="singleInstance"/>
-        <activity android:name=".Login.RegisterActivity"
-                  android:launchMode="singleInstance"/>
+        <activity android:name=".Suggestions.FriendSuggestion"/>
+        <activity android:name=".camera.CropActivity"/>
+        <activity android:name=".Profile.Profile">
 
-
+        </activity>
         <activity
-            android:name=".Search.SearchActivity"
-            android:windowSoftInputMode="adjustNothing"
-            android:launchMode="singleInstance">
+            android:name=".camera.TakePhotoActivity"
+            android:screenOrientation="portrait">
+
+
 
         </activity>
-
+        <activity android:name=".camera.FilterActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="599f3c021d22446a86e72c4802d8841efe8a183c"
+            />
     </application>
-
 </manifest>
