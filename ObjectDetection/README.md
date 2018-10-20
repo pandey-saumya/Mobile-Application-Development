@@ -1,1 +1,1 @@
-# FingerReader-BadFraming
+# OpenCV Object detection using Android
