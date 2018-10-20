@@ -46,20 +46,15 @@
                   android:launchMode="singleInstance"/>
         <activity android:name=".Login.RegisterActivity"
                   android:launchMode="singleInstance"/>
-        <activity android:name=".opengl.OpenGLES10Activity"
-                  android:launchMode="singleInstance"
-                  android:screenOrientation="portrait"/>
-        <activity android:name=".opengl.NewStoryActivity"
-                  android:launchMode="singleInstance"
-                  android:screenOrientation="portrait"/>
+
+
         <activity
             android:name=".Search.SearchActivity"
             android:windowSoftInputMode="adjustNothing"
             android:launchMode="singleInstance">
 
         </activity>
-        <activity android:name=".materialcamera.CaptureActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".materialcamera.CaptureActivity2" android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>
