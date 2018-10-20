@@ -35,7 +35,7 @@ import saumya.com.instagramclone2.Utils.UserListAdapter;
 import saumya.com.instagramclone2.models.User;
 
 /**
- * Created by User on 5/28/2017.
+ * Created by Saumya Pandey.
  */
 
 public class SearchActivity extends AppCompatActivity{
