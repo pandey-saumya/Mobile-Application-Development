@@ -3,10 +3,6 @@ package com.example.saumya.sharegram.Utils;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Created by User on 7/24/2017.
- */
-
 public class FileSearch {
 
     /**
