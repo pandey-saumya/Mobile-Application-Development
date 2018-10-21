@@ -37,14 +37,12 @@ public class BitmapFilter extends AsyncTask<Integer, Void, Bitmap> {
     private Bitmap bitmap;
     private boolean flag = false;
 
+    // Loading the filter library
     static
     {
         System.loadLibrary("NativeImageProcessor");
     }
-
-
-
-
+    
     /**
      * change bitmap filter style
      * @param bitmap
