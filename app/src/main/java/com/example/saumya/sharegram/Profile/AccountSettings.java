@@ -85,16 +85,6 @@ public class AccountSettings extends AppCompatActivity {
             Log.d(TAG, "getIncomingIntent: recieved incoming intent from " + getString(R.string.profileactivity));
             setViewPager(pagerAdapter.getFragmentNumber(getString(R.string.edit_profile)));
         }
-//        if(intent.hasExtra(getString(R.string.selected_image))){
-//            Log.d(TAG, "getIncomingIntent: New Incoming image URL");
-//            if(intent.getStringExtra(getString(R.string.return_to_fragment)).equals(getString(R.string.edit_profile))){
-//                //Setting up og profile image
-//                FirebaseMethods firebaseMethods = og FirebaseMethods(AccountSettings.this);
-//                firebaseMethods.uploadNewPhoto(getString(R.string.profile_photo),null,0,
-//                        intent.getStringExtra(getString(R.string.selected_image)));
-//            }
-
-//        }
     }
 
     private void setupFragments(){
