@@ -108,11 +108,7 @@ public class Viewpost extends Fragment {
             mActivityNumber = getActivitynumBundle();
             getPhotodetails();
             getLikesString();
-//        }catch (NullPointerException e){
-//            Log.e(TAG, "onCreateView: NullPointer Exception " + e.getMessage());
-//        }
 
-//        navigation();
         return view;
     }
 
