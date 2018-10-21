@@ -16,8 +16,6 @@ public class Photo implements Parcelable {
     private List<Comment> comments;
     private String cityName;
 
-
-
     public Photo() {
 
     }
