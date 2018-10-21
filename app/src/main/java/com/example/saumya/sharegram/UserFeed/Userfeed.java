@@ -35,7 +35,7 @@ public class Userfeed extends AppCompatActivity {
     private HashMap<String,String> nameList = new HashMap<String,String>();
 
 
-    //firebase
+    //firebase variables
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseDatabase mFirebasedatabase;
@@ -76,27 +76,6 @@ public class Userfeed extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
-
-
-//    private void getUsername(){
-//
-//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-//        Query query = reference.child(getString(R.string.dbname_users));
-//
-//        query.addListenerForSingleValueEvent(og ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                for(DataSnapshot singleSnapshot: dataSnapshot.getChildren()){
-//                    nameList.put(singleSnapshot.child("user_id").getValue().toString(),singleSnapshot.child("username").getValue().toString());
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
 
     protected HashMap<String,String> getNameList(){
         return nameList;
