@@ -61,7 +61,7 @@ public class MyFeedFragment extends Fragment {
     private TextView mFollowerName;
     private CircleImageView mFollowerImage;
 
-    //firebase
+    //firebase variables
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseDatabase mFirebaseDatabase;
@@ -71,10 +71,7 @@ public class MyFeedFragment extends Fragment {
 
     public void onUpdate() {
         Log.d(TAG, "ElasticListView: updating list view...");
-
-//        getFollowing();
     }
-
 
     public void onLoad() {
         Log.d(TAG, "ElasticListView: loading...");
@@ -82,13 +79,10 @@ public class MyFeedFragment extends Fragment {
         // Notify loading is done
     }
 
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        Userfeed activity = (Userfeed) getActivity();
-//        nameList = activity.getNameList();
+
         View view = inflater.inflate(R.layout.fragment_userfeed, container, false);
         listView = (ListView) view.findViewById(R.id.listview);
         mFollowerImage = (CircleImageView) view.findViewById(R.id.latest_follower_photo);
