@@ -3,7 +3,7 @@ package com.example.saumya.sharegram.camera.filters;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
-
+// Brightness and Contrast Filter
 public class BnCFilter {
 
     SeekBar seekbar;
@@ -52,8 +52,6 @@ public class BnCFilter {
                     BnCFilterAsync task = new BnCFilterAsync(vi,seekBar,CONTRAST);
                     task.execute();
                 }
-
-
             }
 
             @Override
