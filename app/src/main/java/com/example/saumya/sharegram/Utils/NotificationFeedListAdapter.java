@@ -79,13 +79,6 @@ public class NotificationFeedListAdapter extends ArrayAdapter<Notice> {
             holder = (ViewHolder) convertView.getTag();
         }
 
-//        if(getItem(position).equals("commented")){
-//
-//            holder.notification.setText(" commented on your photo!");
-//        }else if(getItem(position).equals("liked")){
-//            holder.notification.setText(" liked on your photo!");
-//        }
-
         //set the username and profile image
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
