@@ -76,20 +76,6 @@ public class SuggestionlistAdapter extends ArrayAdapter<User> {
 
         }
 
-//        holder.backarrow = (ImageView)convertView.findViewById(R.id.suggestbackarrow);
-//        holder.backarrow.setOnClickListener(og View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d(TAG, "onClick: Navigating back to Profile Activity");
-//                Intent intent = og Intent(mContext, Profile.class);
-//                appCompatActivity.startActivity(intent);
-//            }
-//        });
-
-//        holder.username.setText(getItem(position).getUsername());
-//
-//        holder.displayname.setText("abc");
-
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         Query query = reference.child(mContext.getString(R.string.dbname_user_account_settings))
                 .child(getItem(position).getUser_id());
