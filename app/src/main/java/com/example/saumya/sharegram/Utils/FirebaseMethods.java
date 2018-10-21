@@ -148,11 +148,6 @@ public class FirebaseMethods {
                     //insert into 'user_account_settings' node
                     setProfilePhoto(firebaseUrl.toString());
 
-          //          ((AccountSettingsActivity)mContext).setViewPager(
-            //                ((AccountSettingsActivity)mContext).pagerAdapter
-              //                      .getFragmentNumber(mContext.getString(R.string.edit_profile_fragment))
-                //    );
-
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
