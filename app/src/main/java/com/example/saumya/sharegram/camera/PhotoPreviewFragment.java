@@ -26,8 +26,8 @@ import java.io.IOException;
  * create an instance of this fragment.
  */
 public class PhotoPreviewFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // Rename parameter arguments, choose names that match
+    // the fragment initialization parameters
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final int CONFIRM = 1;
@@ -38,11 +38,7 @@ public class PhotoPreviewFragment extends Fragment {
     Button confirm;
     Button edit;
     Bitmap bmp;
-
-
-
-
-
+    
     public PhotoPreviewFragment() {
         // Required empty public constructor
     }
@@ -65,7 +61,7 @@ public class PhotoPreviewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the fragment layout
         return inflater.inflate(R.layout.fragment_photo_preview, container, false);
     }
 
@@ -93,8 +89,6 @@ public class PhotoPreviewFragment extends Fragment {
                 /*
                  * Do something
                  */
-
-
                     setButtonListener(CONFIRM);
                     setButtonListener(EDIT);
 
@@ -114,8 +108,6 @@ public class PhotoPreviewFragment extends Fragment {
                         passBitmap();
 
                         // upload photo to storage async
-
-
                         //back to main feed
                         Intent intent = new Intent(getContext(), NextActivity.class);
                         startActivity(intent);
@@ -138,10 +130,7 @@ public class PhotoPreviewFragment extends Fragment {
                 });
 
         }
-
-
     }
-
 
     private void passBitmap(){
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -156,8 +145,6 @@ public class PhotoPreviewFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
-
-
 
     private Bitmap setImageView(ImageView imageEdit) throws IOException {
 
