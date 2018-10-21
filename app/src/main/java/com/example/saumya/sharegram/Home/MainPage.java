@@ -48,7 +48,7 @@ public class MainPage extends AppCompatActivity implements Mainfeedlistadapter.O
 
     private Context mainContext = MainPage.this;
 
-    //firebase thing
+    //firebase variables
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
