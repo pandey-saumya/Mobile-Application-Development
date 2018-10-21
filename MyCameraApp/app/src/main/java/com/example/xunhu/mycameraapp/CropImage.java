@@ -1,4 +1,4 @@
-package com.example.xunhu.mycameraapp;
+package com.example.karanbansal.mycameraapp;
 
 import android.Manifest;
 import android.content.ActivityNotFoundException;
@@ -32,8 +32,6 @@ public class CropImage extends AppCompatActivity {
     final int RequestPermissionCode=1;
     DisplayMetrics displayMetrics;
     int width,height;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
