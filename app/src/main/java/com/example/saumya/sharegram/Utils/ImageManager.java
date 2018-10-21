@@ -10,10 +10,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Created by User on 7/29/2017.
- */
-
 public class ImageManager {
 
     private static final String TAG = "ImageManager";
