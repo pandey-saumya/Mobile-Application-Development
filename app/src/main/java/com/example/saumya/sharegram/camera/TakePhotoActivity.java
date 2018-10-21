@@ -277,11 +277,6 @@ public class TakePhotoActivity extends AppCompatActivity {
 
                     }
                 });
-
-
-
-
-
     }
 
     private void passToPreview(Bitmap bmp, int rotate) {
@@ -297,8 +292,4 @@ public class TakePhotoActivity extends AppCompatActivity {
                 .commit();
 
     }
-
-
-
-
 }
