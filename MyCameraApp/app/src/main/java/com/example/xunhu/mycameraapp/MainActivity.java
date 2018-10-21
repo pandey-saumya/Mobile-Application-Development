@@ -1,4 +1,4 @@
-package com.example.xunhu.mycameraapp;
+package com.example.karanbansal.mycameraapp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
