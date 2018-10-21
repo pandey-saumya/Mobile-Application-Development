@@ -71,8 +71,6 @@ public class EditProfileFragment extends Fragment implements ConfirmPasswordPopu
         mChangeProfilePhoto = (TextView) view.findViewById(R.id.changeprofilephoto);
         mFirebaseMethods = new FirebaseMethods(getActivity());
 
-
-//        setProfileImage();
         setupFirebaseAuth();
         ImageView backarrow = (ImageView)view.findViewById(R.id.backIcon);
         backarrow.setOnClickListener(new View.OnClickListener() {
@@ -157,15 +155,6 @@ public class EditProfileFragment extends Fragment implements ConfirmPasswordPopu
             popup.setTargetFragment(EditProfileFragment.this, 1);
 
 
-            // step2) check if the email already is registered
-            //          -'fetchProvidersForEmail(String email)'
-            // step3) change the email
-            //          -submit the og email to the database and authentication
-        }
-
-        /**
-         * change the rest of the settings that do not require uniqueness
-         */
         if(!mUserSettings.getSettings().getDisplay_name().equals(displayName)){
             //update displayname
             mFirebaseMethods.updateUserAccountSettings(displayName, null, null, 0);
@@ -184,28 +173,15 @@ public class EditProfileFragment extends Fragment implements ConfirmPasswordPopu
         }
     }
 
-
-
-//    private void setProfileImage(){
-//        Log.d(TAG, "setProfileImage: Setting Profile Image");
-//        String imgURL = "https://wallpaperbrowse.com/media/images/3848765-wallpaper-images-download.jpg";
-//        UniversalImageLoader.setImage(imgURL, mProfilePhoto, null,"");
-//    }
-
     private void setProfileWidgets(UserSettings userSettings) {
         //Log.d(TAG, "setProfileWidgets: setting widgets with data retrieving from firebase database: " + userSettings.toString());
         Log.d(TAG, "setProfileWidgets: setting widgets with data retrieving from firebase database: " + userSettings.getSettings().getUsername());
 
         mUserSettings = userSettings;
-//        User user = userSettings.getUser();
         UserAccountSettings settings = userSettings.getSettings();
         Log.d(TAG, "setProfileWidgets: setting widgets with data retrieving from firebase database: " + settings.getProfile_photo());
 
         UniversalImageLoader.setImage(settings.getProfile_photo(), mProfilePhoto, null, ""); //error happened java.lang.IllegalArgumentException: view must not be null
-
-//        Glide.with(getActivity())
-//                .load(settings.getProfile_photo())
-//                .into(mProfilePhoto);
 
         mDisplayName.setText(settings.getDisplay_name());
         mUsername.setText(settings.getUsername());
