@@ -124,13 +124,6 @@ public class ViewComments extends Fragment {
             public void onClick(View v) {
                 Log.d(TAG, "onClick: navigating back");
                 getActivity().getSupportFragmentManager().popBackStack();
-//                if(getCallingActivityfromBundle().equals(getString(R.string.home_activity))){
-//                    getActivity().getSupportFragmentManager().popBackStack();
-//                    //((MainPage)getActivity()).showlayout();
-//                }else{
-//                    getActivity().getSupportFragmentManager().popBackStack();
-//                }
-
             }
         });
     }
@@ -193,7 +186,7 @@ public class ViewComments extends Fragment {
     }
 
            /*
-    ------------------------------------ Firebase ---------------------------------------------
+    ------------------------------------ Firebase Implementation---------------------------------------------
      */
 
     /**
@@ -284,16 +277,7 @@ public class ViewComments extends Fragment {
                                     mPhoto = photo;
 
                                     setupWidgets();
-//                    List<Like> likesList = og ArrayList<Like>();
-//                    for (DataSnapshot dSnapshot : singleSnapshot
-//                            .child(getString(R.string.field_likes)).getChildren()){
-//                        Like like = og Like();
-//                        like.setUser_id(dSnapshot.getValue(Like.class).getUser_id());
-//                        likesList.add(like);
-//                    }
-
                                 }
-
                             }
 
                             @Override
@@ -323,11 +307,7 @@ public class ViewComments extends Fragment {
 
                     }
                 });
-
-
-
     }
-
 
     @Override
     public void onStart() {
@@ -342,246 +322,4 @@ public class ViewComments extends Fragment {
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
-
 }
-
-    //
-//    private static final String TAG = "ViewComments";
-//
-//    public ViewComments(){
-//        super();
-//        setArguments(og Bundle());
-//    }
-//
-//    //widgets
-//    private ImageView mBackarrow, mCheckmark;
-//    private EditText mComment;
-//    private ListView mListview;
-//
-//    private FirebaseAuth mAuth;
-//    private FirebaseAuth.AuthStateListener mAuthListener;
-//    private FirebaseDatabase mFirebasedatabase;
-//    private DatabaseReference myRef;
-//
-//    private ArrayList<Comment> mComments;
-//    private Photo mPhoto;
-//    private Context mContext;
-//    @Nullable
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_view_comments,container,false);
-//        mBackarrow = (ImageView)view.findViewById(R.id.imageBackArrow);
-//        mCheckmark = (ImageView)view.findViewById(R.id.ivPostComment);
-//        mListview = (ListView)view.findViewById(R.id.listview);
-//        mComment = (EditText)view.findViewById(R.id.comment);
-//        mComments = og ArrayList<>();
-//        mContext = getActivity();
-//        setupFirebaseAuth();
-//        try{
-//            mPhoto = getphotofrombundle();
-//            setupFirebaseAuth();
-//
-//        }catch (NullPointerException e){
-//            Log.e(TAG, "onCreateView: NullPointer Exception " + e.getMessage());
-//        }
-//
-//        return view;
-//    }
-//
-//    private void closeKeyboard(){
-//        View view = getActivity().getCurrentFocus();
-//        if(view != null){
-//            InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-//            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
-//        }
-//    }
-//
-//    private Photo getphotofrombundle(){
-//        Log.d(TAG, "getphotofrombundle: arguments "+ getArguments());
-//        Bundle bundle = this.getArguments();
-//        if(bundle != null){
-//            return bundle.getParcelable(getString(R.string.photo));
-//
-//        }else{
-//            return null;
-//        }
-//    }
-//
-//    private void setupWidgets(){
-//
-//        CommentListAdapter adapter = og CommentListAdapter(mContext,R.layout.comment_layout,mComments);
-//        mListview.setAdapter(adapter);
-//
-//        mCheckmark.setOnClickListener(og View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(!mComment.getText().toString().equals("")){
-//                    Log.d(TAG, "onClick: Attempting to submit a og comment");
-//                    addnewcomment(mComment.getText().toString());
-//
-//                    mComment.setText("");
-//                    closeKeyboard();
-//                }else{
-//                    Toast.makeText(getActivity(),"Blank Comment",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//        mBackarrow.setOnClickListener(og View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d(TAG, "onClick: Navigating Back");
-//                getActivity().getSupportFragmentManager().popBackStack();
-//            }
-//        });
-//    }
-//    private void setupFirebaseAuth(){
-//        Log.d(TAG, "setupFirebaseAuth");
-//        mAuth = FirebaseAuth.getInstance();
-//        mFirebasedatabase = FirebaseDatabase.getInstance();
-//        myRef = mFirebasedatabase.getReference();
-//
-//        mAuthListener = og FirebaseAuth.AuthStateListener() {
-//            @Override
-//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-//                FirebaseUser user = firebaseAuth.getCurrentUser();
-//                if(user != null){
-//                    //somebody signed in
-//                    Log.d(TAG, "onAuthStateChanged:signed_in" + user.getUid());
-//                } else{
-//                    //nobodys here
-//                    Log.d(TAG, "onAuthStateChanged:signed_out");
-//                }
-//            }
-//        };
-//
-//        Log.d(TAG, "setupFirebaseAuth: Photo_id - PROBLEM");
-//        if (mPhoto.getComments().size() == 0){
-//            mComments.clear();
-//            Comment firstComment = og Comment();
-//            firstComment.setComment(mPhoto.getCaption());
-//            firstComment.setUser_id(mPhoto.getUser_id());
-//            firstComment.setDate_created(mPhoto.getDate_created());
-//            mComments.add(firstComment);
-//            mPhoto.setComments(mComments);
-//            setupWidgets();
-//
-//        }
-//
-//        myRef.child(mContext.getString(R.string.dbname_photos))
-//                .child(mPhoto.getPhoto_id())
-//        .child(mContext.getString(R.string.field_comments))
-//        .addChildEventListener(og ChildEventListener() {
-//                    @Override
-//                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//
-//                        Query query = myRef
-//                                .child(mContext.getString(R.string.dbname_photos))
-//                                .orderByChild(mContext.getString(R.string.field_photo_id))
-//                                .equalTo(mPhoto.getPhoto_id());
-//                        query.addListenerForSingleValueEvent(og ValueEventListener() {
-//                            @Override
-//                            public void onDataChange(DataSnapshot dataSnapshot) {
-//                                for (DataSnapshot singlesnapshot : dataSnapshot.getChildren()){
-//                                    Photo photo = og Photo();
-//                                    Map<String,Object> objectMap = (HashMap<String, Object>) singlesnapshot.getValue();
-//                                    photo.setCaption(objectMap.get(mContext.getString(R.string.field_caption)).toString());
-//                                    photo.setTags(objectMap.get(mContext.getString(R.string.field_tags)).toString());
-//                                    photo.setPhoto_id(objectMap.get(mContext.getString(R.string.field_photo_id)).toString());
-//                                    photo.setUser_id(objectMap.get(mContext.getString(R.string.user_id)).toString());
-//                                    photo.setDate_created(objectMap.get(mContext.getString(R.string.field_date_created)).toString());
-//                                    photo.setImage_path(objectMap.get(mContext.getString(R.string.field_image_path)).toString());
-//
-//                                    mComments.clear();
-//                                    Comment firstComment = og Comment();
-//                                    firstComment.setComment(mPhoto.getCaption());
-//                                    firstComment.setUser_id(mPhoto.getUser_id());
-//                                    firstComment.setDate_created(mPhoto.getDate_created());
-//
-//                                    mComments.add(firstComment);
-//                                    for(DataSnapshot dsnapshot: singlesnapshot.child(mContext.getString(R.string.field_comments)).getChildren()){
-//                                        Comment comment = og Comment();
-//                                        comment.setUser_id(dsnapshot.getValue(Comment.class).getUser_id());
-//                                        comment.setComment(dsnapshot.getValue(Comment.class).getComment());
-//                                        comment.setDate_created(dsnapshot.getValue(Comment.class).getDate_created());
-//
-//                                        mComments.add(comment);
-//                                    }
-//                                    photo.setComments(mComments);
-//                                    mPhoto = photo;
-//                                    setupWidgets();
-//                                }
-//
-//                            }
-//
-//                            @Override
-//                            public void onCancelled(DatabaseError databaseError) {
-//                                Log.d(TAG, "onCancelled: Query Cancelled");
-//                            }
-//                        });
-//                    }
-//
-//                    @Override
-//                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//
-//                    }
-//                });
-//
-//
-//
-//    }
-//
-//    private void addnewcomment(String newComment){
-//        Log.d(TAG, "addnewcomment: adding og comment" + newComment);
-//        String commentID = myRef.push().getKey();
-//        Comment comment = og Comment();
-//        comment.setComment(newComment);
-//        comment.setDate_created(getTimestamp());
-//        comment.setUser_id(FirebaseAuth.getInstance().getCurrentUser().getUid());
-//
-//        myRef.child(getString(R.string.dbname_photos))
-//                .child(mPhoto.getPhoto_id())
-//                .child(getString(R.string.field_comments))
-//                .child(commentID)
-//                .setValue(comment);
-//        myRef.child(getString(R.string.dbname_user_photos))
-//                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                .child(mPhoto.getPhoto_id())
-//                .child(getString(R.string.field_comments))
-//                .child(commentID)
-//                .setValue(comment);
-//    }
-//    private String getTimestamp(){
-//        SimpleDateFormat sdf = og SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.CANADA);
-//        sdf.setTimeZone(TimeZone.getTimeZone("Canada/Pacific"));
-//        return sdf.format(og Date());
-//    }
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        mAuth.addAuthStateListener(mAuthListener);
-//    }
-//
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//        if(mAuthListener != null){
-//            mAuth.removeAuthStateListener(mAuthListener);
-//        }
-//    }
-//
-//}
